@@ -8,15 +8,22 @@
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 @handbook-title[
  #:documentclass 'scrreprt
- #:subtitle "见习学神的硬核笔记"
+ ;#:document-options '(openany oneside)
  #:figure @geo-scale[@geo-interdisciplinary-screen[] 0.42]
  #:hide-version? #true
  ]{架构师的跨学科课堂}
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+@texbook-frontmatter[#:docls-book? #false]
+
+@include-section{literacy/about-stem.scrbl}
+@include-section{literacy/about-plt.scrbl}
+
 @handbook-smart-table[#:phantom? #true]
 
-@include-section{literacy/about.scrbl}
+@texbook-mainmatter[#:docls-book? #false]
+
+@texbook-appendix{附录}
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 @handbook-bonus-appendix[]

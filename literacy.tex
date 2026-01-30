@@ -7,13 +7,18 @@
 \setcounter{secnumdepth}{3}
 
 %% reset chapter counters for parts
-\usepackage{chngcntr}
-\counterwithin{chapter}{part}
+% \usepackage{chngcntr}
+% \counterwithin{chapter}{part}
 
 %% set chapter format
 \ctexset{
-  chapter/name = {},
-  chapter/number = \arabic{chapter},
-  section/number = \thesection,
-  section/format = \Large\bfseries
+   chapter/name = {第, 篇},
+   chapter/number = \chinese{chapter},
+   section/name = {第, 幕},
+   section/number = \chinese{section},
+   section/format = \Large\bfseries,
+   subsection/name = {第, 场},
+   subsection/number = \chinese{subsection},
+   subsubsection/name = {第, 镜},
+   subsubsection/number = \chinese{subsubsection}
 }
