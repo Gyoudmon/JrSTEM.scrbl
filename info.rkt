@@ -12,4 +12,4 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define typesettings
-  '(["JrSTEM.scrbl" xelatex]))
+  '(["about.scrbl" xelatex]))

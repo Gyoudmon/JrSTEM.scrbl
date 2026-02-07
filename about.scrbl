@@ -1,30 +1,27 @@
 #lang scribble/report
 
 @require{literacy/literacy.rkt}
-@require{stone/self/logo.rkt}
 
 @(require geofun/vector)
+@(require geofun/avatar)
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 @handbook-title[
  #:documentclass 'scrreprt
- ;#:document-options '(openany oneside)
- #:figure @geo-scale[@geo-interdisciplinary-screen[] 0.42]
+ #:subtitle "我和我的跨学科教育"
+ #:figure @geo-scale[@bacteriophage-logo[128.0] 0.42]
  #:hide-version? #true
  ]{架构师的跨学科课堂}
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 @texbook-frontmatter[#:docls-book? #false]
 
-@include-section{literacy/about-stem.scrbl}
-@include-section{literacy/about-plt.scrbl}
-
 @handbook-smart-table[#:phantom? #true]
 
 @texbook-mainmatter[#:docls-book? #false]
 
-@texbook-appendix{附录}
+@include-section{literacy/about-stem.scrbl}
+@include-section{literacy/about-plt.scrbl}
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-@handbook-bonus-appendix[]
-
+@;handbook-bonus-appendix[]

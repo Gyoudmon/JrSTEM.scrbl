@@ -33,6 +33,9 @@
           (Experience6 . "理解和感受化学家的研究")
           (Cleanup . "实验善后处理")
           (Light . "留给五年级做光学实验")
+
+          (#:/doc/docx . "实验报告\n@架构师的跨学科课堂")
+          (#:/doc/pptx . "课件\n@架构师的跨学科课堂")
           
           (Spread . "小实验：纸吸水观察墨汁扩展\n模拟物质组成分析")
           (Rote . "在困惑中死记硬背\n化学家的工作包括提取和合成新物质")))
@@ -63,13 +66,13 @@
        
        [#:tree (move-down 1 'Step1)
         [=> (move-left 3.5 #false '#:write)
-            (move-down 3 '#:/doc/实验报告)]
+            (move-down 3 '#:/doc/docx)]
         [=> (move-down 1 '#::Filtrate)
             
-            [#:tree (move-down 0.75 '-=)
+            [#:tree (move-down 0.75 '--=)
              [=> (move-left)
-                 [#:tree (move-down '#:/doc/实验报告 'Step2 material-pin)
-                  [=> (move-to '#:/doc/实验报告 '#:write)]
+                 [#:tree (move-down '#:/doc/docx 'Step2 material-pin)
+                  [=> (move-to '#:/doc/docx '#:write)]
                   [=> [#:tree (move-left-down 0.5 1 'obvious?)
                        [=> (move-down 3 '+sumup- "[色带明显{P < 0.1}]")
                            (move-down 1 'Sumup)
@@ -89,7 +92,7 @@
                  (move-down 2)
                  (move-right 1 '#:/试剂架)]]]]]]
 
-  [#:tree (jump-to '#:/doc/实验报告)
+  [#:tree (jump-to '#:/doc/docx)
    [=> (move-right 0.2)
        (L-step 'Sumup #false '#:read)]
    [=> (move-left 0.2)
@@ -110,7 +113,7 @@
        (move-down 1 'Grinding+Filter)
        (move-down 1 '#::Filtrate6)
 
-       [#:tree (move-down 1 '-6=)
+       [#:tree (move-down 1 '--6=)
         [=> (move-right 1)
             [#:tree (move-down 1 'Chromatography material-pin)
              [=> (move-left-down 0.25 1 'Experience6)
@@ -124,10 +127,10 @@
              [=> (L-step '#:/试剂架 "[留给五年级做光学实验]")]]]]]]
   
   (jump-to 2)
-  [#:tree (jump-down 'Prepare6 '#:/doc/课件)
-   [=> (move-left 0.25)
+  [#:tree (jump-down 'Prepare6 '#:/doc/pptx)
+   [=> (sidestep-left 2)
        (L-step 'Watch #false '#:read)]
-   [=> (move-left 0.25)
+   [=> (sidestep-left 1)
        (L-step 'Prepare #false '#:read)]
    [=> (move-to 'Prepare6 '#:read)]]
   
@@ -136,7 +139,4 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (module+ main
-  (require geofun/vector)
-
-  ; 75ms
-  (time (geo-freeze chlorophyll.dia)))
+  chlorophyll.dia)
