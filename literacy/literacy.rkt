@@ -13,18 +13,29 @@
 (require (for-syntax syntax/parse))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(define-syntax (handbook-portfolio-story stx)
+(define-syntax (article-desc stx)
   (syntax-parse stx #:datum-literals []
-    [(_ argl ...)
+    [(_ (~alt (~once (~seq #:keywords [kw ...]))
+              (~once (~seq #:timestamp date)))
+        ...)
      (syntax/loc stx
-       (handbook-root-story argl ...))]))
+       (handbook-sidenote*
+        (list (tt date) (linebreak))
+        (list (handbook-word-count #:make-element elem) (linebreak))
+
+        (let ([keywords (list kw ...)])
+          (when (pair? keywords)
+            (add-between #:splice? #true
+                         (for/list ([keyword (in-list keywords)])
+                           (racketkeywordfont (tech keyword)))
+                         (list "," ~))))))]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Just in case for README.md
 (enter-digimon-zone!)
 
 (tamer-block-label-separator #false)
-(tamer-block-label-tail "： ")
+(tamer-block-label-tail " ")
 (tamer-block-label-style 'bold)
 
 (tamer-default-figure-label "图")

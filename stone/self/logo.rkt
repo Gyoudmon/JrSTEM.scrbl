@@ -29,9 +29,9 @@
     
     7-bridge-agent))
 
-(define geo-symbol : (-> Char Font Geo)
-  (lambda [sym font]
-    (define color (hsv (random 360) 1.0 1.0))
+(define geo-symbol : (->* (Char Font) (Flonum) Geo)
+  (lambda [sym font [L 1.0]]
+    (define color (hsv (random 360) 1.0 L))
 
     (bacteriophage-logo #:sheath-length 0.0 #:symbol sym
                         #:λ-color color #:border-color color #:edge-color color
@@ -67,15 +67,27 @@
                                          stick)
                      (geo-pyramid (shuffle symbols) (* em -0.5) (* em 0.5) '??)))))
 
+(define geo-separator : (-> Geo)
+  (lambda []
+    (define symfont (desc-font (default-art-font) #:family 'math))
+    (define em : Nonnegative-Flonum (font-metrics-ref symfont 'em))
+    
+    (geo-h?-append* #:gapsize (* em 1.0)
+                    (for/list : (Listof Geo) ([idx (in-range 11)])
+                      (geo-scale (geo-rotate (geo-symbol #\space symfont 0.25) (* (random) 2pi))
+                                 (+ 0.2 (* (random) 0.50)))))))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define mini-icon (geo-inset (bacteriophage-logo 128.0 #:sheath-length 0.0)))
 (define splash:STEM (geo-interdisciplinary-screen))
+(define spearator (geo-separator))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (module+ main
   mini-icon
 
   splash:STEM
+  spearator
 
   #;(for/list : (Listof Geo) ([op (in-list geo-pin-operators)])
     (geo-rt-superimpose (geo-interdisciplinary-screen op)

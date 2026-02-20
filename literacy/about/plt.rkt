@@ -83,99 +83,96 @@
 (define title : String "JrLab && 项目制教学体系\n@架构师的跨学科课堂")
 
 (define pbl-colorize : UC-Block-Theme-Adjuster
-  (lambda [self id hint]
-    (case id
-      [(#:Researcher #:Teacher) (remake-dia-block-style self #:fill-paint 'Yellow)]
-      [(#:Engineer) (remake-dia-block-style self #:fill-paint 'DeepSkyBlue)]
-      [(#:Parent) (remake-dia-block-style self #:fill-paint 'MediumOrchid)]
-      [(arch dev api bdd) (remake-dia-block-style self #:fill-paint 'DeepSkyBlue #:stroke-color 'transparent)]
-      [(fit dup example demo) (remake-dia-block-style self #:fill-paint 'LightGreen #:stroke-color 'transparent)]
-      [(ct develop trade-off) (remake-dia-block-style self #:fill-paint 'LemonChiffon #:stroke-color 'transparent)])))
-
-(define pbl-system-boundary : Dia-Free-Track-Adjuster
-  (lambda [self source target track labels info]
-    (remake-dia-track-style self #:dash 'solid #:font (make-font:tweak #:weight 'bold #:size 'large))))
+  (lambda [style id stereotype]
+    (if (keyword? id)
+        (case id
+          [(#:Researcher #:Teacher) (remake-dia-block-style style #:fill-paint 'Yellow)]
+          [(#:Engineer) (remake-dia-block-style style #:fill-paint 'DeepSkyBlue)]
+          [(#:Parent) (remake-dia-block-style style #:fill-paint 'MediumOrchid)])
+        (case stereotype
+          [(#:dev) (remake-dia-block-style style #:fill-paint 'DeepSkyBlue #:stroke-color 'transparent)]
+          [(#:edu) (remake-dia-block-style style #:fill-paint 'LemonChiffon #:stroke-color 'transparent)]
+          [(#:stu) (remake-dia-block-style style #:fill-paint 'LightGreen #:stroke-color 'transparent)]))))
 
 (define pbl-desc
   #hasheq((#:Researcher . "教研老师")
-          (#:Teacher . "授课老师")
+          (#:Teacher . "教学老师")
           (#:Student . "学生")
           (#:Parent . "家长")
-          (arch . "设计教学引擎")
-          (dev . "实现教学引擎")
+          (arch#dev . "设计教学引擎")
+          (code#dev . "实现教学引擎")
           (asset . "预制素材资源")
-          (api . "规范命名 API")
+          (api#dev . "规范命名 API")
           (train . "培训系统用法")
           (doc . "编写用户文档")
-          (example . "编写范例项目")
-          (bdd . "行为驱动开发")
+          (example#edu . "编写范例项目")
+          (bdd#dev . "行为驱动开发")
           (deploy . "部署系统\n同步课程源码")
-          (develop . "研发课程")
-          (demo . "编写演示程序")
-          (fit . "裁剪课程项目")
-          (dup . "完成课程项目")
-          (experiment . "设计实验")
-          (ct . "分解、识别\n抽象、建模")
-          (trade-off . "权衡新旧知识点")
-          (report . "项目总结与报告")))
+          (develop#edu . "研发课程")
+          (demo#edu . "编写演示程序")
+          (fit#edu . "裁剪课程项目")
+          (dup#stu . "完成课程项目")
+          (experiment#edu . "设计实验\n准备实验环境")
+          (experiment#stu . "做实验")
+          (cthinking#stu . "分解、识别\n抽象、建模")
+          (trade-off#edu  . "权衡新旧知识点")
+          (report#stu . "项目总结与报告")))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define-use-case-diagram! pbl.dia #:start '#:Engineer
-  #:parameterize ([default-uc-block-theme-adjuster pbl-colorize]
-                  [default-free-track-theme-adjuster pbl-system-boundary])
+  #:parameterize ([default-uc-block-theme-adjuster pbl-colorize])
   [#:frame 'White #:start-name "软件工程师" #:block-desc pbl-desc] #:-
-  [#:zone 'JrLab 'system #:desc title
-   [(actor-use 2 -pi/4 'arch)
-    (actor-use 2 0 'dev)
-    (actor-use 2 +pi/4 'train)
-    
-    (jump-to 'dev)
-    (case-include 2.5 -pi/8 'bdd)
-    (case-extend 2.5 +0 'asset)
-    
-    (jump-to 'arch)
-    (case-include 2.5 -pi/12 'api)
-    (case-include 'bdd)
-    
-    (jump-to 'train)
-    (case-include 2 -pi/12 'doc)
-    (case-include 2 +pi/12 'example)
-    (case-extend 2 +5pi/12 'develop)]]
-   
+
+  (actor-use 2 -pi/4 'arch#dev)
+  (actor-use 2 0 'code#dev)
+  (actor-use 2 +pi/4 'train)
+  
+  (jump-to 'code#dev)
+  (case-include 2.5 -pi/8 'bdd#dev)
+  (case-extend 2.5 +0 'asset)
+  
+  (jump-to 'arch#dev)
+  (case-include 2.5 -pi/12 'api#dev)
+  (case-include 'bdd#dev)
+  
+  (jump-to 'train)
+  (case-include 2 -pi/12 'doc)
+  (case-include 2 +pi/12 'example#edu)
+  (case-extend 2 +5pi/12 'develop#edu)
+
   (jump-to -0.5+8i '#:Teacher)
-  [#:with-zone 'JrLab
-   [(actor-use 2 -pi/6 'fit)
-    (actor-use 3 0 'deploy)
-    (actor-use 3+9i 'report)]]
+  (actor-use 2 -pi/6 'fit#edu)
+  (actor-use 3 0 'deploy)
+  (actor-use 3+9i 'report#stu)
   
   [#:tree (jump-to -0.5+4i '#:Researcher)
-   [=> (actor-use 2.0 +pi/8 'demo)
-       (actor-use 'develop)
-       (case-include 'example)]
+   [=> (actor-use 2.0 +pi/8 'demo#edu)
+       (actor-use 'develop#edu)
+       (case-include 'example#edu)]
    [=> (actor-generalize '#:Teacher)]]
 
-  (jump-to 'develop)
-  [#:with-zone 'JrLab
-   [(case-include 2.5 -pi/12 'trade-off)
-    (case-extend 2.0 +pi/8 'experiment)
-    (case-include 3.0+5.5i 'ct)]]
+  (jump-to 'develop#edu)
+  (case-include 2.5 -pi/12 'trade-off#edu)
+  (case-extend 2.0 +pi/8 'experiment#edu)
+  (case-include 3.0+5.5i 'cthinking#stu)
 
   [#:tree (jump-to 6+8i '#:Student)
-   [=> (actor-use 2 -5pi/6 'dup)
-       (actor-use 'report)]
+   [=> (actor-use 2.0 -7pi/8 'dup#stu)
+       (actor-use 3.2 -5pi/8 'experiment#stu)
+       (actor-use 'report#stu)]
    [=> (actor-use 'deploy)]]
 
   (jump-to 6+6i '#:Parent)
-  (radial-back 1 pi/4 (string->symbol "//首任老师\n支持孩子学习"))
   
-  [#:with-zone 'JrLab
-   [(jump-to 'ct)
-    (case-extend 'fit)
-    (jump-to 'ct)
-    (case-extend 'dup)]]
+  (extend 'fit#edu 'cthinking#stu)
+  (extend 'dup#stu 'cthinking#stu)
+  (extend 'dup#stu 'experiment#stu)
 
-  (jump-to 0.5-3.75i '.sys)
+  (jump-to 0.5-3.75i '#:.sys)
   (T-step 5+13.5i title)
-  (T-step '.sys))
+  (T-step '#:.sys)
+
+  (note '#:Parent 1 pi/4 "首任老师" "表现出重视" "支持孩子学习"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (module+ main

@@ -20,8 +20,9 @@
 
 @texbook-mainmatter[#:docls-book? #false]
 
-@include-section{literacy/about-stem.scrbl}
-@include-section{literacy/about-plt.scrbl}
+@include-section{literacy/about/stem.scrbl}
+@include-section{literacy/about/plt.scrbl}
+@include-section{literacy/about/ideal.scrbl}
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 @;handbook-bonus-appendix[]
