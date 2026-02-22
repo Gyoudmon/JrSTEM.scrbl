@@ -23,6 +23,7 @@
 @include-section{literacy/about/stem.scrbl}
 @include-section{literacy/about/plt.scrbl}
 @include-section{literacy/about/ideal.scrbl}
+@include-section{literacy/about/lang.scrbl}
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 @;handbook-bonus-appendix[]
