@@ -94,11 +94,11 @@
 本实验探究课的主场是在STEM教育机构内，
 也能够裁剪适配进学校高年级科学课的相关板块内。
 为方便体现这两种场景的不同，
-我用@bold{活动图}(Activity Diagram)梳理了教学的关键流程和物料流向(@tamer-figure-ref{chlorophyll.act.dia})。
+我用@bold{活动图}(Activity Diagram)梳理了教学的关键流程和物料流向(@tamer-figure-ref{chlorophyll.act})。
 左边是机构教学流程，右边是学校科学课教学流程。
 
-@tamer-figure!['chlorophyll.act.dia @list{《光合色素的奥秘》主题课@~ 活动图}
-               @geo-dsfit[@chlorophyll.dia 400 0]]
+@tamer-figure!['chlorophyll.act @list{《光合色素的奥秘》主题课@~ 活动图}
+               @geo-dsfit[@chlorophyll.act 400 0]]
 
 作为机构的实验探究课，这是典型的生命科学与物质科学的联动。
 学生可能已经有相关经验，比如提取紫甘蓝中的花青素，

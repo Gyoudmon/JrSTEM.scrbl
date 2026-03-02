@@ -1,7 +1,7 @@
 #lang info
 
 (define collection "JrSTEM")
-(define pkg-desc "Online Articles released for Office Account")
+(define pkg-desc "Online Articles about My Education")
 
 (define deps '("digimon" "graphics"))
 (define build-deps '("digimon" "scribble-lib" "racket-doc"))
@@ -12,4 +12,4 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define typesettings
-  '(["about.scrbl" xelatex]))
+  '(["Architecture.scrbl" xelatex]))

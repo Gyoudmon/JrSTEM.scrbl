@@ -44,7 +44,7 @@
 (define material-pin (geo-inset (geo-square 8 #:stroke pin-stroke) 2.0))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(define-activity-diagram! chlorophyll.dia
+(define-activity-diagram! chlorophyll.act
   [#:block-desc captions #:frame 'White] #:-
   (move-down 1 'Observe)
 
@@ -139,4 +139,4 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (module+ main
-  chlorophyll.dia)
+  chlorophyll.act)

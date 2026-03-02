@@ -6,7 +6,7 @@
 (require diafun/usecase)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(define-flowchart! prepare.dia
+(define-flowchart! prepare.flow
   #:parameterize ([default-flow-track-label-rotate? #true]
                   [default-flow-track-label-inline? #false])
   [#:start-name "序章" #:frame 'White] #:-
@@ -54,7 +54,7 @@
   (move-left 2 '|/doc//[name]/workspace/| (cons #false "mkdir")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(define-flowchart! hsdec.dia
+(define-flowchart! hsdec.flow
   #:parameterize ([default-flow-track-label-inline? #false]
                   [default-flow-track-label-rotate? #true])
   [#:start-name "同音替换解密\n@架构师的跨学科课堂" #:frame 'White
@@ -119,7 +119,7 @@
           (report#stu . "项目总结与报告")))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(define-use-case-diagram! pbl.dia #:start '#:Engineer
+(define-use-case-diagram! pbl.uc #:start '#:Engineer
   #:parameterize ([default-uc-block-theme-adjuster pbl-colorize])
   [#:frame 'White #:start-name "软件工程师" #:block-desc pbl-desc] #:-
 
@@ -176,6 +176,6 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (module+ main
-  prepare.dia
-  hsdec.dia
-  pbl.dia)
+  prepare.flow
+  hsdec.flow
+  pbl.uc)

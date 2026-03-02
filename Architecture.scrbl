@@ -8,7 +8,7 @@
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 @handbook-title[
  #:documentclass 'scrreprt
- #:subtitle "我和我的跨学科教育"
+ #:subtitle "教学架构"
  #:figure @geo-scale[@bacteriophage-logo[128.0] 0.42]
  #:hide-version? #true
  ]{架构师的跨学科课堂}
@@ -20,10 +20,11 @@
 
 @texbook-mainmatter[#:docls-book? #false]
 
-@include-section{literacy/about/stem.scrbl}
-@include-section{literacy/about/plt.scrbl}
-@include-section{literacy/about/ideal.scrbl}
-@include-section{literacy/about/lang.scrbl}
+@include-section{literacy/architecture/stem.scrbl}
+@include-section{literacy/architecture/plt.scrbl}
+@include-section{literacy/architecture/ideal.scrbl}
+@include-section{literacy/architecture/lang.scrbl}
+@include-section{literacy/architecture/bullseye.scrbl}
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 @;handbook-bonus-appendix[]
