@@ -138,7 +138,7 @@ C++ 项目价值三千万人民币，
 目前正运行在若干万吨巨轮上供工程人员施工作业(@tamer-figure-ref{dredging})。
 
 @tamer-figure!['dredging "我的疏浚工控系统(C++/CX 外壳, 标准 C++17 内核)"]{
- @(let ([s 0.15])
+ @(let ([s 0.5])
     (list @(para (stone-image "action-shots/metrics.png" #:scale s) @elem{疏浚数据可视化界面})
           @(para (stone-image "action-shots/SCADA.png" #:scale s) @elem{疏浚施工现场})))}
 

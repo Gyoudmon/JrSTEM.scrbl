@@ -37,7 +37,7 @@
           (s:goal1 . "完成活动目标1\n[回顾练习锚点定位系统]")
           (t:goal2 . "构建目标原型2\n[角色控制]")
           (s:goal2 . "探索活动目标2\n[水平移动、跳跃、边界碰撞策略]")
-          (s:physics . "矫正物理常量\n[速度、重力加速度、多段跳]")
+          (s:physics . "定义和微调物理常量\n[速度、重力加速度]")
           (t:goal3 . "构建目标原型3\n[子弹控制]")
           (s:goal3 . "探索活动目标3\n[子弹复位、弹道轨迹、碰撞检测]")
           (t:goal4 . "构建目标原型4\n[靶子传送带、靶子状态机]")
@@ -72,7 +72,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define-activity-diagram! bullseye.act
   #:parameterize ([default-act-block-theme-adjuster act-adjust]
-                  [default-dia-note-width 200.0])
+                  [default-dia-free-track-label-inline? #false]
+                  #;[default-dia-note-width 256.0])
   [#:block-desc captions #:frame 'White] #:-
   (move-down 1 'LandOn)
 
@@ -160,14 +161,33 @@
         [(jump-to '#:/靶子传送界面#screen) => (move-to 's:goal4 '#:watch)]
         [(jump-to '#:/靶子变换界面#screen) => (move-to 's:goal5 '#:watch)]
         [(jump-up '.break) [=> (jump-left '#:/doc/t:PBL.git/)
-                               (move-right '#:/doc/s:PBL.git/ #false " <<class break after 3 hours>> ")]]]]
+                               (move-right '#:/doc/s:PBL.git/ #false "[class break after 3 hours]")]]]]
    ]
 
   (jump-to '===-)
   (move-down 1 'Summary)
   (move-down 1 '$)
 
-  (note 'refactor#focus 2 0 "重构出两个私有函数:\nvoid bullet_home();\nvoid bullseye_home();"))
+  (note #:stereotype 'C++
+        'gobjects 1.618 0
+        "给游戏世界中的物体“起名字”："
+        "Tuxmon* hero;"
+        "Rectanglet* platform;"
+        "Rectanglet* conveyor;"
+        "Rectanglet* bullseye;"
+        "Circlet* bullet;")
+  
+  (note #:stereotype 'C++
+        's:physics 1.618 -pi
+        "double hero_speed = 3.0;"
+        "double bullet_speed = 10.0;"
+        "double gravity_acceleration = 0.1;")
+
+  (note #:stereotype 'C++
+        'refactor#focus 1.618 0
+        "重构出两个私有函数:"
+        "void bullet_home();"
+        "void bullseye_home();"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (module+ main

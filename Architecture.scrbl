@@ -8,6 +8,7 @@
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 @handbook-title[
  #:documentclass 'scrreprt
+ #:document-options '((DIV . 12))
  #:subtitle "教学架构"
  #:figure @geo-scale[@bacteriophage-logo[128.0] 0.42]
  #:hide-version? #true
@@ -18,11 +19,13 @@
 
 @handbook-smart-table[#:phantom? #true]
 
+@$tex:newcounter:algorithm[]
+
 @texbook-mainmatter[#:docls-book? #false]
 
 @include-section{literacy/architecture/stem.scrbl}
 @include-section{literacy/architecture/plt.scrbl}
-@include-section{literacy/architecture/ideal.scrbl}
+@include-section{literacy/architecture/func.scrbl}
 @include-section{literacy/architecture/lang.scrbl}
 @include-section{literacy/architecture/bullseye.scrbl}
 

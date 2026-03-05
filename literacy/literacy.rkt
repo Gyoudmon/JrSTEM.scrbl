@@ -6,6 +6,7 @@
 
 (require digimon/tamer)
 (require digimon/collection)
+(require geofun/resize)
 
 (require scribble/manual)
 
@@ -26,9 +27,10 @@
         (let ([keywords (list kw ...)])
           (when (pair? keywords)
             (add-between #:splice? #true
+                         #:before-first (list (linebreak))
                          (for/list ([keyword (in-list keywords)])
                            (racketkeywordfont (tech keyword)))
-                         (list "," ~))))))]))
+                         (list (linebreak)))))))]))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Just in case for README.md
@@ -41,7 +43,7 @@
 (tamer-default-figure-label "图")
 (tamer-default-table-label "表")
 (tamer-default-code-label "段")
-(tamer-default-algorithm-label "算法")
+(tamer-default-algorithm-label "活动")
 
 (tamer-indexed-block-hide-chapter-index #false)
 
@@ -53,7 +55,12 @@
 
 (define stone-image
   (lambda [path #:scale [scale 1.0]]
-    (image (digimon-path 'stone path) #:scale scale)))
+    (image #:scale (real->double-flonum scale)
+           (digimon-path 'stone path))))
+
+(define geo-vector
+  (lambda [g [max-width 424] [max-height 0]]
+    (geo-dsfit g max-width max-height)))
 
 (define tamer-c++
   (lambda [id caption subpath start [end #px"END"] [ocness 'close-open]]
@@ -91,9 +98,3 @@
   (lambda keys
     (elem #:style "keys"
           (string-join (add-between (map ~a keys) "+")))))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(define tag:Racket (elem #:style "langTag" "Racket"))
-(define tag:C++ (elem #:style "langTag" "C++"))
-(define tag:Python (elem #:style "langTag" "Python"))
-(define tag:Scratch (elem #:style "langTag" "Scratch"))
