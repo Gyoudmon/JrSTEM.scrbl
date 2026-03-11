@@ -46,6 +46,8 @@
           (update#critical . "调试 update 函数\n[深度思考状态代码顺序]")
           (t:goal5 . "构建目标原型5\n[靶子变换机制]")
           (s:goal5 . "完成活动目标5\n[数组和随机数的简单应用]")
+          (t:goal6 . "构建目标原型6\n[子弹变色机制]")
+          (s:goal6 . "完成活动目标6\n[真三原色打靶游戏完成]")
           (gobjects . "定义新世界中的“物体”\n[角色、道具、背景]")
           (LookBack . "回顾\n[顺便瞎折腾多段跳]")
           (Summary . "项目总结")
@@ -104,6 +106,7 @@
         [(move-down 2.5 't:goal4 (cons #false t:pin)) => (move-right '#:home '#:/靶子传送界面#screen '#:display)]
         [(move-down 4.5 '同步...#.4 t:pin) => #;do-nothing ]
         [(move-down 1.5 't:goal5 t:pin) => (move-right '#:home '#:/靶子变换界面#screen '#:display)]
+        [(move-down 1.5 't:goal6 t:pin) => (move-right '#:home '#:/最终效果#screen '#:display)]
         [(move-down 1.5) => (move-left '#:home '===-)]]]
 
    ; student's lane
@@ -151,6 +154,7 @@
              [=> (move-right 1.0 #false (cons "[完全不可玩]" #false))
                  (L-step '+update- #false s:pin)]
              [=> (move-down 2.0 's:goal5 (cons "[基本可玩]" s:pin))
+                 (move-down 1.5 's:goal6 s:pin)
                  (L-step '===-)]]]]
 
        [#:seq
@@ -160,6 +164,7 @@
         [(jump-to '#:/弹道轨迹界面#screen) => (move-to 's:goal3 '#:watch)]
         [(jump-to '#:/靶子传送界面#screen) => (move-to 's:goal4 '#:watch)]
         [(jump-to '#:/靶子变换界面#screen) => (move-to 's:goal5 '#:watch)]
+        [(jump-to '#:/最终效果#screen) => (move-to 's:goal6 '#:watch)]
         [(jump-up '.break) [=> (jump-left '#:/doc/t:PBL.git/)
                                (move-right '#:/doc/s:PBL.git/ #false "[class break after 3 hours]")]]]]
    ]
@@ -187,7 +192,13 @@
         'refactor#focus 1.618 0
         "重构出两个私有函数:"
         "void bullet_home();"
-        "void bullseye_home();"))
+        "void bullseye_home();")
+
+  (note #:stereotype 'bonus
+        's:goal6 1.618 0
+        "学生沉浸在自己的作品里"
+        "惊讶于连续五个青色靶子是bug"
+        "这就是“随机”的真实效果"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (module+ main
