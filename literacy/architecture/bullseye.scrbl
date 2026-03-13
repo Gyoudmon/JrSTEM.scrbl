@@ -1,7 +1,5 @@
 #lang scribble/report
 
-@(require geofun/vector)
-
 @require{../literacy.rkt}
 @require{bullseye.rkt}
 
@@ -17,7 +15,7 @@
 AI 出结果更快，但是对初学者没有任何意义。
 
 @tamer-figure!['bullseye "《三原色打靶》游戏运行效果"]{
- @(stone-image "action-shots/bullseye.png" #:scale 0.5)}
+ @(stone-image "architecture/bullseye.png" #:scale 0.5)}
 
 @tamer-figure-ref{bullseye}中的男生五年级，
 有一年 Scratch/pygame 网课经验。
@@ -41,7 +39,7 @@ AI 出结果更快，但是对初学者没有任何意义。
 这学期结束后，我们一起做一个有意思的项目。
 
 @tamer-figure!['ai4bullseye "《冒险岛4》水枪打靶游戏"]{
- @(stone-image "action-shots/adventure-island.png" #:scale 0.5)}
+ @(stone-image "architecture/adventure-island.png" #:scale 0.5)}
 
 对于项目选题，他知道自己不想做什么，
 但是说不出来想做什么。
@@ -55,7 +53,7 @@ AI 出结果更快，但是对初学者没有任何意义。
 且慢，先别急着不可思议，
 @tamer-figure-ref{tweet}这位美国推友对我教学视频的反应就很典型。
 
-@tamer-figure!['tweet "一位美国推友的好奇"]{@(stone-image "action-shots/tweet.png")}
+@tamer-figure!['tweet "一位美国推友的好奇"]{@(stone-image "architecture/tweet.png")}
 
 在我之前， C++ 确实不适合用来教小学生。
 后来，为了解决这个问题，

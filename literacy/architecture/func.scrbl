@@ -102,8 +102,8 @@
 甚至没有专门把“求余数”定义成一种运算。
 
 @tamer-figure!['longdivision @list{多项式长除法的典型应用案例}
-               @(list @(para (stone-image "action-shots/AM-GM.png" #:scale 0.32) @elem{高一均值不等式通用解法})
-                      @(para (stone-image "action-shots/Oblique-Asymptotes.png" #:scale 0.32) @elem{大一微积分求函数斜渐近线}))]
+               @(list @(para (stone-image "architecture/AM-GM.png" #:scale 0.32) @elem{高一均值不等式通用解法})
+                      @(para (stone-image "architecture/Oblique-Asymptotes.png" #:scale 0.32) @elem{大一微积分求函数斜渐近线}))]
 
 @tamer-figure-ref{longdivision}两个例子中的竖式长除法是不是很眼熟？
 从数的运算到式的运算，除法和带余除法一直都在，最早出现在初中的因式分解模块。

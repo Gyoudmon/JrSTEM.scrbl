@@ -1,7 +1,5 @@
 #lang scribble/report
 
-@(require geofun/vector)
-
 @require{../literacy.rkt}
 @require{stem.rkt}
 
@@ -62,7 +60,7 @@
 @handbook-scenario{案例1: 义务教育校本课《地月系统》}
 
 @tamer-figure!['lunar-craters @list{月球陨石坑成因探究实验@~ 课堂实况}
-               @stone-image["action-shots/lunar-craters.png"]]
+               @stone-image["architecture/lunar-craters.png"]]
 
 困难肯定存在，但学生们的积极变化也确实有目共睹。
 一个标志性的转折点出现在四年级的地月系统单元，
@@ -114,7 +112,7 @@
 让“化学家的工作包括提取、合成新物质”不再只是课本上的句子(@tamer-figure-ref{chlorophyll})。
 
 @tamer-figure!['chlorophyll @list{叶绿素提取与层析实验@~ 课堂实况}
-               @stone-image["action-shots/chlorophyll.png"]]
+               @stone-image["architecture/chlorophyll.png"]]
 
 最巧妙的安排其实还是跨年级协作。
 六年级学《物质的变化》时，五年级碰巧在学《光》。
@@ -122,7 +120,7 @@
 可以在标准教学过程中穿插一个对比实验(@tamer-figure-ref{water.vs.chlorophyll})。
 
 @tamer-figure!['water.vs.chlorophyll @list{绿色水溶液@~ vs.@~ 叶绿素胶体}
-               @stone-image["action-shots/water.vs.chlorophyll.png"]]
+               @stone-image["architecture/water.vs.chlorophyll.png"]]
 
 让学生看到光线穿过叶绿素滤液时形成的光亮通路，
 不仅可以解释光沿直线传播，还能自然引入胶体和光学性质话题，

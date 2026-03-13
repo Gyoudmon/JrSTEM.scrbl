@@ -12,4 +12,5 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define typesettings
-  '(["Architecture.scrbl" xelatex]))
+  '(["Architecture.scrbl" xelatex]
+    ["Home.scrbl" xelatex]))
