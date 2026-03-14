@@ -1,3 +1,3 @@
-#!/usr/bin/zsh
+#!/bin/zsh
 
 echo "Hello, Racket"
