@@ -27,18 +27,12 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: update wisemon
-        run: |
-          chmod +x ./digivice/wisemon.sh
-          ./digivice/wisemon.sh
+        run: ./digivice/wisemon.sh
 
       # Runs a set of commands using the runners shell
       - name: update racket packages
-        run: |
-          chmod +x ./digivice/racket.sh
-          ./digivice/racket.sh
+        run: ./digivice/racket.sh
 
       # Runs a set of commands using the runners shell
       - name: wisemon weave
-        run: |
-          chmod +x ./digivice/weave.sh
-          ./digivice/weave.sh
+        run: ./digivice/weave.sh
