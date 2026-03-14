@@ -1,3 +1,5 @@
 #!/bin/zsh
 
-racket --version
+export PLTHOME=/opt/PLTracket 
+
+${PLTHOME}/bin/racket --version
