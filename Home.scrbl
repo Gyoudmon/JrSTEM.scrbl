@@ -1,6 +1,6 @@
 #lang scribble/report
 
-@require{literacy/literacy.rkt}
+@require{literacy/zh.rkt}
 
 @(require geofun/vector)
 @(require geofun/avatar)

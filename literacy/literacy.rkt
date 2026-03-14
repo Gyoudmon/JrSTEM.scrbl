@@ -5,7 +5,6 @@
 (provide (rename-out [:rdr :desc] [:out :type]))
 
 (require digimon/tamer)
-(require digimon/collection)
 (require geofun/resize)
 
 (require scribble/manual)
@@ -31,23 +30,6 @@
                          (for/list ([keyword (in-list keywords)])
                            (racketkeywordfont (tech keyword)))
                          (list (linebreak)))))))]))
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; Just in case for README.md
-(enter-digimon-zone!)
-
-(tamer-block-label-separator #false)
-(tamer-block-label-tail " ")
-(tamer-block-label-style 'bold)
-
-(tamer-default-figure-label "图")
-(tamer-default-table-label "表")
-(tamer-default-code-label "段")
-(tamer-default-algorithm-label "活动")
-
-(tamer-indexed-block-hide-chapter-index #false)
-
-(current-tongue 'zh-Hans)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define /dev/src  (build-path "stone" "src"))
