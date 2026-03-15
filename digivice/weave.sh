@@ -2,5 +2,4 @@
 
 export PLTHOME=/opt/PLTracket 
 
-${PLTHOME}/bin/racket --version
-pwd
+${PLTHOME}/bin/raco wisemon -v weave
