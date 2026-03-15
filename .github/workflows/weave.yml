@@ -40,6 +40,7 @@ jobs:
       - name: Deploy to Terminus
         uses: peaceiris/actions-gh-pages@v4
         with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: ./compiled/Gyoudmon
           publish_branch: terminus
           user_name: 'wargrey@plteen.fun'
