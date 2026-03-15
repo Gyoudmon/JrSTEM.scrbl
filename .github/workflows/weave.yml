@@ -41,6 +41,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          cname: linguisteen.org
           publish_dir: ./compiled/Gyoudmon
           publish_branch: terminus
           user_name: 'wargrey@plteen.fun'
