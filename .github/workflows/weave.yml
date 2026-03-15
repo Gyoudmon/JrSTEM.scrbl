@@ -37,7 +37,7 @@ jobs:
       - name: wisemon weave
         run: ./digivice/weave.sh
 
-      - name: Deploy to Terminus
+      - name: deploy to terminus
         uses: peaceiris/actions-gh-pages@v4
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}

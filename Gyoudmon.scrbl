@@ -8,4 +8,4 @@
 
 @handbook-smart-table[]
 
-@handbook-bonus-appendix[]
+@handbook-bonus-appendix[#:bibliography-section? #false]
