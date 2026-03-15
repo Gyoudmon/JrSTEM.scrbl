@@ -38,10 +38,10 @@ jobs:
         run: ./digivice/weave.sh
 
       - name: Deploy to Terminus
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        publish_dir: ./compiled/Gyoudmon
-        publish_branch: terminus
-        user_name: 'wargrey@plteen.fun'
-        user_email: 'juzhenliang@gmail.com'
-        enable_jekyll: false
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          publish_dir: ./compiled/Gyoudmon
+          publish_branch: terminus
+          user_name: 'wargrey@plteen.fun'
+          user_email: 'juzhenliang@gmail.com'
+          enable_jekyll: false
