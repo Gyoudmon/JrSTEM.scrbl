@@ -74,8 +74,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define-activity-diagram! bullseye.act
   #:parameterize ([default-act-block-theme-adjuster act-adjust]
-                  [default-dia-free-track-label-inline? #false]
-                  #;[default-dia-note-width 256.0])
+                  [default-dia-free-track-label-inline? #false])
   [#:block-desc captions #:frame 'White] #:-
   (move-down 1 'LandOn)
 
