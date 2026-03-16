@@ -25,25 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Runs a set of commands using the runners shell
-      - name: update wisemon
-        run: ./digivice/wisemon.sh
-
-      # Runs a set of commands using the runners shell
       - name: update racket packages
         run: ./digivice/racket.sh
 
-      # Runs a set of commands using the runners shell
-      - name: wisemon weave
+      - name: raco wisemon weave
         run: ./digivice/weave.sh
 
       - name: deploy to terminus
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          cname: linguisteen.org
-          publish_dir: ./compiled/Gyoudmon
-          publish_branch: terminus
-          user_name: 'wargrey@plteen.fun'
-          user_email: 'juzhenliang@gmail.com'
-          enable_jekyll: false
+        run: ./digivice/deploy.sh
