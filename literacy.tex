@@ -12,6 +12,8 @@
 % \usepackage{chngcntr}
 % \counterwithin{chapter}{part}
 
+\renewcommand{\contentsname}{目\hspace{1em}录}
+
 %% set chapter format
 \ctexset{
    chapter/name = {第, 篇},
@@ -24,3 +26,7 @@
    subsubsection/name = {第, 镜},
    subsubsection/number = \chinese{subsubsection}
 }
+
+%% Define fonts for Japanese
+\newCJKfontfamily\japanesefont{Hiragino Mincho ProN}
+\newcommand{\japanese}[1]{\japanesefont #1}

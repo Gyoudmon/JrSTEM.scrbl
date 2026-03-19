@@ -34,7 +34,7 @@
 
 @texbook-mainmatter[#:docls-book? #false]
 
-@include-section{literacy/home/shell.scrbl}
+@include-section{literacy/shell/home.scrbl}
 
 @texbook-appendix{附录}
 

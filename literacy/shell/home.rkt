@@ -56,8 +56,8 @@
              [=> (jump-left 2 '#:/doc/C:/opt/)]
              [=> (move-down 1 '>>:raco)
                  (note '>>:raco 2 0
-                       (raco-pkg-install-string "C:/digimon ")
-                       (raco-pkg-install-string "C:/graphics"))
+                       (raco-pkg-install-string "C:/opt/digimon ")
+                       (raco-pkg-install-string "C:/opt/graphics"))
                  
                  [#:tree (move-down 1 '>>:src)
                   [=> (move-down 1 'End$)]

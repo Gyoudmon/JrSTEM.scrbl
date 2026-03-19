@@ -5,7 +5,7 @@
 @require{../literacy.rkt}
 @require{../../stone/self/logo.rkt}
 
-@require{shell.rkt}
+@require{home.rkt}
 
 @handbook-root-story{初来乍到，认识命令行 Shell}
 

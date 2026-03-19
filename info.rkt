@@ -16,4 +16,5 @@
 
 (define typesettings
   '(["Architecture.scrbl" xelatex]
-    ["Home.scrbl" xelatex]))
+    ["TheBigBang.scrbl" xelatex]
+    ["Shell.scrbl" xelatex]))
