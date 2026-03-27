@@ -1,0 +1,198 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\setlength{\parindent}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\textbf{\Huge Zhenliang Ju} \\
+\vspace{4pt}
+\small \texttt{Tel:186-0123-9387} $|$
+\href{mailto:juzhenliang@hotmail.com}{\underline{juzhenliang@hotmail.com}} $|$
+\href{https://linkedin.com/in/wargrey}{\underline{LinkedIn:wargrey}} $|$
+\href{https://github.com/wargrey}{\underline{Github:wargrey}}
+
+%-----------SUMMARY-----------
+\section{Summary}
+I design and build software systems from scratch to structure and visualize complex domain knowledge.
+My work spans industrial control and educational software, centered on systems that evolve and transfer across domains,
+enabled by domain-specific languages and semantic visualization for modeling, reasoning, and learning.
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Self-employed}{Yiwu, Zhejiang, China}
+      {Independent Developer \& Instructor}{Jul. 2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Partnered with Yiwu Qingwu Arts Center
+          for CSP/J training and Futian Second Primary School for public Python-based
+          IT curricula and clubs; focused on adapting formal algorithm design and high-level
+          computational concepts for diverse institutional requirements.}
+        \resumeItem{Formalized the architecture of a teaching system into a thesis-scale document.}
+        \resumeItem{Synthesized prior experience in industrial control systems
+          and educational software into a unified approach to system design and
+          representation, bridging the gap between engineering practice and learning
+          environments.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Zhenjiang Luokebai Training Center Co., Ltd.}{Zhenjiang, Jiangsu, China}
+      {STEM Instructor \& Curriculum Developer}{Mar. 2021 -- Jun. 2024}
+      \resumeItemListStart
+        \resumeItem{Architected and maintained a high-performance C++ teaching engine derived
+          from industrial control logic to simulate complex system behaviors for learning environments.}
+        \resumeItem{Applied formal engineering principles—including state
+          modeling and modular design—to restructure complex scientific curriculum into
+          machine-executable and visually verifiable logic.}
+        \resumeItem{Utilized high-frequency user interaction data to
+          iteratively refine engine architecture, ensuring long-term coherence between
+          language semantics and visual feedback.}
+        \resumeItem{Partnered with Zhenjiang Peiwen
+          Experimental School to deploy a comprehensive science curriculum for
+          compulsory education; managed the full lifecycle from hands-on experiments
+          and project-based learning (PBL) to standardized assessments and
+          competitive mentoring.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Zhenjiang Mingrun Information Technology Co., Ltd.}{Zhenjiang, Jiangsu, China}
+      {Software Engineer}{Aug. 2017 -- May 2020}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented a full
+          dredging control system on the UWP platform from scratch, replacing legacy
+          Win32 systems with a unified, high-reliability architecture deployed on real
+          industrial vessels.}
+        \resumeItem{Developed a custom GUI framework to translate
+          raw numerical sensor data into structured visual representations (e.g., drag
+          arms, hydraulic systems, GPS-integrated spatial tooling),
+          significantly improving operational clarity for non-technical crew.}
+        \resumeItem{Partnered with ship operators and domain
+          experts to formalize fragmented, non-technical knowledge into coherent
+          system behaviors.}
+        \resumeItem{Conducted 3 months of continuous onboard
+          testing to ensure stability under harsh maritime conditions, iterating the system
+          based on real-world feedback loops.}
+        \resumeItem{Established core design principles (clarity over ornamentation) that
+          later served as the foundation for a teaching-oriented
+          software engine.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Graphics} $|$ \emph{Typed Racket, C}}{\textbf{October 2014 -- Present}}
+          \resumeItemListStart
+            \resumeItem{Sustained \textbf{long-term evolution} of the system through rigorous abstraction design and engineering practices}
+            \resumeItem{Designed and built a compositional, multi-collection DSL ecosystem for semantic visualization and diagram generation}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{digimon} $|$ \emph{Typed Racket, C}}{\textbf{Apirl 2017 -- Present}}
+          \resumeItemListStart
+            \resumeItem{Built custom C++ build systems and tooling to abstract away industry-standard complexity,
+              optimizing the "mental model" for users learning systems programming}
+            \resumeItem{Developed a specification-driven testing framework with beginner-friendly diagnostics,
+              supporting evaluation workflows similar to competitive programming environments}
+            \resumeItem{Implemented core components of the zlib compression algorithm to support data formats and protocols (e.g., PNG, OOXML) that rely on it}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{JrSTEM} $|$ \emph{Typed Racket, Scribble, C++, tex, HTML/CSS}}{Apirl 2026 -- Present}
+          \resumeItemListStart
+            \resumeItem{Developed and maintained a code-driven content system for producing structured computer science learning materials}
+            \resumeItem{Designed a Scribble-based documentation pipeline to generate and manage educational content as part of the codebase}
+            \resumeItem{Applied a domain-specific representation framework to encode and deliver programming concepts through executable teaching materials}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Nanjing University of Aeronautics and Astronautics}{Nanjing, Jiangsu, China}
+      {Bachelor of Engineering in Computer Science}{Part-time, 2025}
+    \resumeSubheading
+      {Changshu Institute of Technology}{Changshu, Jiangsu, China}
+      {Associate's in Software Engineering}{2010}
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{
+\item{
+  \textbf{Programming Languages}{: Typed Racket, C++, C, HTML/CSS, Java} \\
+  \textbf{Databases}{: MySQL, SQLite, Oracle} \\
+  \textbf{Tools \& Technologies}{: LaTeX, Scribble, Content Pipelines, Build Systems} \\
+  \textbf{Areas}{: DSL Design, Visualization, System Design, Educational Systems}
+}
+}
+\end{itemize}
+
+\end{document}
