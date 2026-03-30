@@ -32,6 +32,7 @@
 @texbook-mainmatter[#:docls-book? #false]
 
 @include-section{literacy/bang/language.scrbl}
+@include-section{literacy/bang/function/kickcat.py.scrbl}
 
 @texbook-appendix{附录}
 

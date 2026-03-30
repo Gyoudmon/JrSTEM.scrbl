@@ -5,7 +5,7 @@
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 @handbook-story{人类是语言性生物}
 
-@article-desc[#:keywords ["语言" "自然语言" "程序语言"]
+@article-desc[#:keywords ["语言" "记号" "程序语言"]
               #:timestamp "2026-03-18"]
 
 @emph{Hey, You! Welcome to the digital world!}
