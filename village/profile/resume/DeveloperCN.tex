@@ -1,0 +1,91 @@
+\documentclass[a4paper]{moderncv}
+
+% 风格
+\moderncvcolor{cerulean}
+\moderncvstyle{contemporary}
+
+% 编码（推荐用 xelatex 编译）
+\usepackage{xeCJK}
+% \setCJKmainfont{PingFang SC}
+
+\usepackage[scale=0.85]{geometry}
+\usepackage{setspace}
+\setstretch{1.2}
+
+% 个人信息
+\name{居}{振梁}
+\title{资深C++工程师}
+\phone[mobile]{+86-186-0123-9387}
+\email{juzhenliang@hotmail.com}
+\social[github]{wargrey}
+
+\begin{document}
+
+\makecvtitle
+
+%--------------------------------------------------
+\section{个人简介}
+
+具备全栈视野的系统架构设计者, 拥有10年以上复杂C++系统的演进与落地经验。
+擅长以\textbf{清晰优先于形式}原则降低系统熵增, 完成大型工业系统的现代化重构与重型C++逻辑的轻量化表达。
+现关注\texttt{WebAssembly}、\textbf{工业软件基础设施}与\textbf{DSL语言工具链}领域。
+
+%--------------------------------------------------
+\section{工作经验}
+
+\cventry{2024--2025}{独立学者}{义乌市青舞艺术培训部有限公司}{金华}{}{
+\begin{itemize}
+\item 将自研教学用游戏引擎写成学位论文
+\item 探索 AI 时代的编程教育新方向，构建语义化流程图、活动图、用例图生成软件
+\end{itemize}
+}
+
+\cventry{2021--2024}{研发型科技老师}{镇江空白文化传媒有限公司}{镇江}{}{
+\begin{itemize}
+\item 剥离原先的 UWP 疏浚系统的可视化层，移植到 SDL2 框架上演化成教学用游戏引擎的界面系统
+\item 研发外围工具链，含 \texttt{C++} 构建系统、测试与题库测评系统等
+\item 整套软件系统性降低了\textbf{无基础}学生对\texttt{C++}的恐惧
+\end{itemize}
+}
+
+\cventry{2017--2020}{C++ 上位机软件工程师}{镇江明润信息科技有限公司}{镇江}{}{
+\begin{itemize}
+\item 无成熟行业方案、无现成业务参考，独立从零调研吃透疏浚工程全流程行业知识，
+        从零搭建 UWP 平台工业级疏浚 SCADA/DTPM 控制系统，
+        以「低认知负荷、清晰优先于形式」为设计原则，
+        完成老系统全量替代，实现工程作业流程标准化与可视化升级
+\item 研发自适应 UI 框架(支撑疏浚数据可视化 + 电子海图渲染)
+\item 绕过 UWP 沙盒限制，设计多源异构信号适配层, 兼容 Modbus/GPS/AIS/私有协议;
+        设计 ASN.1 编码的 UDP 局域网通信协议
+\item 参与船载环境累计 6 个月实地测试, 系统支持在恶劣船载环境下 7x24 小时稳定运行
+\end{itemize}
+}
+
+%--------------------------------------------------
+\section{项目}
+
+\cventry{2014--Present}{开源贡献者}{Racket 社区}{远程}{}{
+\begin{itemize}
+\item 构建面向编程教育的知识表达与学习系统, 持续演进超过 10 年；
+        包括可视化语义建模\texttt{DSL}、
+        从\texttt{Markdown}到\texttt{tex}/\texttt{HTML}的写作系统等
+\item 开发多项基础设施组件,
+        涵盖数据压缩(\texttt{zlib}）、安全通信（\texttt{SSH}/\texttt{ASN.1})、
+        现代色彩空间(okLCH, okLab, CIE 色度图)、CSS引擎、数据建模工具等方向
+\end{itemize}
+}
+
+%--------------------------------------------------
+\section{技能}
+
+\cvdoubleitem{核心领域}{系统架构, 可视化渲染, DSL 设计}{编程语言}{C, C++17, Typed Racket, Java}
+\cvdoubleitem{图形与渲染}{cairo, pango, SDL2, UWP, Win2D}{系统与协议}{Modbus, AIS, ASN.1, TCP/UDP}
+\cvdoubleitem{开发工具}{Git, VS Code, 自研工具链}{数据库}{SQLite, MySQL, Oracle}
+
+%--------------------------------------------------
+\section{教育背景}
+
+\cventry{2020--2025}{南京航空航天大学}{计算机科学与技术}{本科}{南京}{}
+\cventry{2006--2009}{苏州工学院(原常熟理工学院)}{J2EE企业级应用开发}{大专}{常熟}{}
+
+\end{document}
