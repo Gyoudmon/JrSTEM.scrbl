@@ -2,7 +2,7 @@
 
 (provide (all-defined-out))
 (provide (all-from-out digimon/tamer))
-(provide (rename-out [:rdr :desc] [:out :type]))
+(provide (rename-out [:rdr :desc]))
 
 (require digimon/tamer)
 (require geofun/resize)

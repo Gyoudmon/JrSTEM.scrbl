@@ -1,6 +1,6 @@
 #lang scribble/report
 
-@require{../literacy.rkt}
+@require{../zh.rkt}
 @require{stem.rkt}
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

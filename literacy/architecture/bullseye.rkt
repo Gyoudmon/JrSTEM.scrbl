@@ -105,7 +105,7 @@
         [(move-down 2.5 't:goal4 (cons #false t:pin)) => (move-right '#:home '#:/靶子传送界面#screen '#:display)]
         [(move-down 4.5 '同步...#.4 t:pin) => #;do-nothing ]
         [(move-down 1.5 't:goal5 t:pin) => (move-right '#:home '#:/靶子变换界面#screen '#:display)]
-        [(move-down 1.5 't:goal6 t:pin) => (move-right '#:home '#:/最终效果#screen '#:display)]
+        [(move-down 1.0 't:goal6 t:pin) => (move-right '#:home '#:/最终效果#screen '#:display)]
         [(move-down 1.5) => (move-left '#:home '===-)]]]
 
    ; student's lane
@@ -153,7 +153,7 @@
              [=> (move-right 1.0 #false (cons "[完全不可玩]" #false))
                  (L-step '+update- #false s:pin)]
              [=> (move-down 2.0 's:goal5 (cons "[基本可玩]" s:pin))
-                 (move-down 1.5 's:goal6 s:pin)
+                 (move-down 1.0 's:goal6 s:pin)
                  (L-step '===-)]]]]
 
        [#:seq
@@ -183,6 +183,7 @@
   
   (note #:stereotype 'C++
         's:physics 1.618 -pi
+        "给游戏世界中的物体“起名字”："
         "double hero_speed = 3.0;"
         "double bullet_speed = 10.0;"
         "double gravity_acceleration = 0.1;")

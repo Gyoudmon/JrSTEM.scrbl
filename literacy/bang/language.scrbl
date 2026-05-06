@@ -1,9 +1,9 @@
 #lang scribble/book
 
-@(require "../literacy.rkt")
+@(require "../zh.rkt")
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-@handbook-story{人类是语言性生物}
+@handbook-root-story{人类是语言性生物}
 
 @article-desc[#:keywords ["语言" "记号" "程序语言"]
               #:timestamp "2026-03-18"]

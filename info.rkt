@@ -18,6 +18,7 @@
   '(["Architecture.scrbl" xelatex]
     ["TheBigBang.scrbl" xelatex]
     ["Shell.scrbl" xelatex]
-
-    ["village/portfolio/Education.scrbl" xelatex]
-    ["village/portfolio/EducationCN.scrbl" xelatex]))
+    ["RandomThoughts.scrbl" xelatex]
+    
+    ["village/profile/Portfolio.scrbl" xelatex]
+    ["village/profile/PortfolioCN.scrbl" xelatex]))

@@ -2,7 +2,7 @@
 
 @(require geofun/vector)
 
-@require{../literacy.rkt}
+@require{../zh.rkt}
 @require{../../stone/self/logo.rkt}
 
 @require{home.rkt}
