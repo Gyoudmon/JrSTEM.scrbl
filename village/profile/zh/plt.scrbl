@@ -8,9 +8,9 @@
 @(require geofun/vector)
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-@handbook-root-story{计算机科学教育}
+@handbook-root-story{计算机科学教学案例}
 
-@handbook-scenario[]{教学案例：跨学科项目制课程}
+@handbook-scenario[]{跨学科项目制课程《三原色打靶游戏》}
 
 @tabular[
  #:pad (list 1 0)
@@ -21,8 +21,7 @@
        (list @bold{结果} @list{在小规模教学实践中能显著提升学习持续性，降低路径切换带来的流失风险}))
  ]
 
-@tamer-figure!['bullseye "五年级男生把玩自己的 C++《三原色打靶游戏》"]{
- @(stone-image "architecture/bullseye.png" #:scale 0.5)}
+@tamer-figure!['bullseye "五年级男生把玩自己的 C++《三原色打靶游戏》"]{@(stone-image "architecture/bullseye.png")}
 
 @tamer-figure-ref{bullseye}中的男生五年级，
 有一年 @tt{Scratch}/@tt{pygame} 网课经验，
@@ -48,11 +47,11 @@
 
 @algo-pseudocode[
  #:tag 'defobjects "定义新世界中的“物体”"
- @list['企鹅英雄]{@(elem @:type{Tuxmon}@:pn{*}@~ @:variable{hero}@:meta{;})}
- @list['长方形平台]{@(elem @:type{Rectanglet}@:pn{*}@~ @:variable{platform}@:meta{;})}
- @list['长方形传送带]{@(elem @:type{Rectanglet}@:pn{*}@~ @:variable{conveyor}@:meta{;})}
- @list['长方形靶子]{@(elem @:type{Rectanglet}@:pn{*}@~ @:variable{bullseye}@:meta{;})}
- @list['圆形子弹]{@(elem @:type{Circlet}@:pn{*}@~ @:variable{bullet}@:meta{;})}
+ @list['企鹅英雄]{@(elem @:type{Tuxmon}@:operator{*}@~ @:variable{hero}@:meta{;})}
+ @list['长方形平台]{@(elem @:type{Rectanglet}@:operator{*}@~ @:variable{platform}@:meta{;})}
+ @list['长方形传送带]{@(elem @:type{Rectanglet}@:operator{*}@~ @:variable{conveyor}@:meta{;})}
+ @list['长方形靶子]{@(elem @:type{Rectanglet}@:operator{*}@~ @:variable{bullseye}@:meta{;})}
+ @list['圆形子弹]{@(elem @:type{Circlet}@:operator{*}@~ @:variable{bullet}@:meta{;})}
  ]
 
 @handbook-action{用代码表达物理模型}
@@ -103,8 +102,7 @@
 → @focus{设计}RGB色彩空间表示法 → @focus{设计}运算法则。
 即，当一个位置上的数字数完了但不发生进位会发生什么?
 
-@tamer-figure!['rgb @list{位值制的扩展与应用@~ 学生手册}]{
- @(stone-image "architecture/positional.png" #:scale 0.5)}
+@tamer-figure!['rgb @list{位值制的扩展与应用@~ 学生手册}]{@(stone-image "architecture/positional.png" #:scale 0.5)}
 
 从游戏功能角度来讲，子弹颜色由三个开关控制，玩家自行判断何时打开或关闭。
 于是，现在我们可以很方便地实现“子弹变色”功能了：
@@ -179,7 +177,7 @@
 @:err{切勿想着学生必须先理解完每一行代码才能开始自己动手
  }——这是编程教育中最典型却也是最常见的低效教法。
 
-@handbook-scenario[]{教学案例：基于数学建模的 CSP/J 竞赛课}
+@handbook-scenario[]{基于数学建模的 CSP/J 竞赛摸底测试}
 
 @tabular[
  #:pad (list 1 0)
@@ -190,7 +188,7 @@
        (list @bold{结果} @list{学生从依赖背模版逐步过渡到独立完成建模任务}))
  ]
 
-@tamer-figure!['csp "跨学段 CSP/J 班，初见"]{@(stone-image "architecture/portfolio/CSP-J.png" #:scale 0.48)}
+@tamer-figure!['csp "跨学段 CSP/J 班，初见"]{@(stone-image "architecture/CSP-J.png")}
 
 我接手过别的老师的初中CSP/J班，七年级入门班(@tamer-figure-ref{csp})和八年级进阶班。
 我挑选的摸底测试题是“终端里的字符画”，
@@ -205,13 +203,13 @@
 在以数学为代表的理科教育中，
 提升思维的教学往往伴随着对学生已经形成的定式的解构，
 这是我选字符画题型作为此次摸底的深层原因——它有可见结构，
-且可以很自然的转化成两个可操作结构。
+且可以很自然的转化成两个可操作结构：
+轮廓跨度(@fig-ref*[#:subidx 'a]{term-pptx})和起点位置(@fig-ref*[#:subidx 'b]{term-pptx})。
 
 @tamer-figure!['term-pptx @list{终端字符画中的数学模型@~ 课件}]{
  @(let ([s 0.26])
     (list @(para (stone-image "architecture/portfolio/term-span.png" #:scale s) @elem{轮廓跨度})
           @(para (stone-image "architecture/portfolio/term-pos.png" #:scale s) @elem{起点位置})))}
-
 
 @handbook-action{用代码表达数学模型}
 
@@ -223,22 +221,22 @@
  #:side (geo-scale ASCII-Art.dia 0.24)
  #:side-offset '-36pt
  #:tag 'scanline @list{用@tt{C++}描述“扫描线算法”}
- @list[@${pos(n, L) = n - L + 1}]{@(elem @:type{int}@~ @:function{pos}@:pn{(}@:type{int}@~ @:variable{n}@:meta[","]@~ @:type{int}@~ @:variable{L}@:pn[") { "]
-                                         @:kw{return}@~ @:variable{n}@~ @:pn{-}@~ @:variable{L}@~ @:pn{+}@~ @:number{1}@:meta{;}@~ @:pn["}"])}
- @list[@${span(L) = 2L - 1}]{@(elem @:type{int}@~ @:function{span}@:pn{(}@:type{int}@~ @:variable{L}@:pn[") { "]
-                                    @:kw{return}@~ @:number{2}@~ @:pn{*}@~ @:variable{L}@~ @:pn{-}@~ @:number{1}@:meta{;}@~ @:pn["}"])}
- @list['定义桩函数]{@(elem @:type{void}@~ @:function{display_line}@:pn{(}@:type{int}@~ @:variable{n}@:meta[","]@~ @:type{int}@~ @:variable{L}@:pn[") { }"])}
+ @list[@${pos(n, L) = n - L + 1}]{@(elem @:type{int}@~ @:function{pos}@:operator{(}@:type{int}@~ @:variable{n}@:meta[","]@~ @:type{int}@~ @:variable{L}@:operator[") { "]
+                                         @:keyword{return}@~ @:variable{n}@~ @:operator{-}@~ @:variable{L}@~ @:operator{+}@~ @:number{1}@:meta{;}@~ @:operator["}"])}
+ @list[@${span(L) = 2L - 1}]{@(elem @:type{int}@~ @:function{span}@:operator{(}@:type{int}@~ @:variable{L}@:operator[") { "]
+                                    @:keyword{return}@~ @:number{2}@~ @:operator{*}@~ @:variable{L}@~ @:operator{-}@~ @:number{1}@:meta{;}@~ @:operator["}"])}
+ @list['定义桩函数]{@(elem @:type{void}@~ @:function{display_line}@:operator{(}@:type{int}@~ @:variable{n}@:meta[","]@~ @:type{int}@~ @:variable{L}@:operator[") { }"])}
  @list[]
- @list[#false]{@(elem @:type{int}@~ @:function{main}@:pn{(}@:type{int}@:meta[","]@~ @:type{char}@:pn["**) {"])}
+ @list[#false]{@(elem @:type{int}@~ @:function{main}@:operator{(}@:type{int}@:meta[","]@~ @:type{char}@:operator["**) {"])}
  @list['金字塔整数层高]{@(elem @hspace[4]@:type{int}@~ @:variable{n}@:meta{;})}
- @list['读取层高]{@(elem @hspace[4]@:kw{std}@:pn{::}@:sym{cin}@~ @:pn{>>}@~ @:variable{n}@:meta{;})}
+ @list['读取层高]{@(elem @hspace[4]@:keyword{std}@:operator{::}@:sym{cin}@~ @:operator{>>}@~ @:variable{n}@:meta{;})}
  @list[]
- @list['对于1至n的每一行L]{@(elem @hspace[4]@:kw{for}@~ @:pn{(}@:type{int}@~ @:variable{L}@~ @:pn{=}@~ @:number{1}@:meta{;}@~
-                       @:variable{L}@~ @:pn{<=}@~ @:variable{n}@:meta{;}@~
-                       @:variable{L}@~ @:pn{++)}@~ @:pn["{"])}
- @list['输出该行字符]{@(elem @hspace[8]@:function{display_line}@:pn{(}@:variable{n}@:meta{,}@~ @:variable{L}@:pn{)}@:meta{;})}
- @list[#false]{@(elem @hspace[4]@:pn["}"])}
- @list[#false]{@(elem @:pn["}"])}
+ @list['对于1至n的每一行L]{@(elem @hspace[4]@:keyword{for}@~ @:operator{(}@:type{int}@~ @:variable{L}@~ @:operator{=}@~ @:number{1}@:meta{;}@~
+                       @:variable{L}@~ @:operator{<=}@~ @:variable{n}@:meta{;}@~
+                       @:variable{L}@~ @:operator{++)}@~ @:operator["{"])}
+ @list['输出该行字符]{@(elem @hspace[8]@:function{display_line}@:operator{(}@:variable{n}@:meta{,}@~ @:variable{L}@:operator{)}@:meta{;})}
+ @list[#false]{@(elem @hspace[4]@:operator["}"])}
+ @list[#false]{@(elem @:operator["}"])}
  ]
 
 @algo-ref{scanline}得到的就是终端字符画题型的典型结构——源自计算机图形学中@emph{填充封闭图形}的扫描线算法。
@@ -264,9 +262,9 @@
 小学高年级学生能听懂，但下课就忘；
 七年级学生跟着老师在纸上推演能掌握精髓；
 八年级学生能仅靠阅读提问自己总结出模型。
-小学生阶段的困难，并非源于建模本身，
+小学生的困难，并非源于建模本身，
 而是抽象认知能力尚不稳定，
-以及其他学科(包括传统教法的编程课和奥数课)没跟上，
+以及其他学科(包括奥数课和传统教法的编程课)没跟上，
 学生课后缺乏直接的刻意练习场景。
 
 因此，@:res{以数学建模为主线的教学路径常被误解为难度高，实际是对认知阶段更敏感}。

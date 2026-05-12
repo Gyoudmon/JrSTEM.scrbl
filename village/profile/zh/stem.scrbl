@@ -4,7 +4,7 @@
 @require{../../../literacy/architecture/stem.rkt}
 
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-@handbook-root-story{科学教育}
+@handbook-root-story{科学教学案例}
 
 我的教育经历始于小学段的科学教育，
 教学场景主要分为两大类，
@@ -14,7 +14,7 @@
  @item{@emph{实验驱动的义务教育科学课}，涵盖完整的授课、考试、评估、学期大作品、组织比赛等环节。}
  @item{小班@emph{项目制素质拓展课}，学生会经历定义问题、制定方案、协作试错，并最终迭代到呈现项目报告的完整探究过程。}]
 
-@handbook-scenario{教学案例: 实验探究课《光合色素的奥秘》}
+@handbook-scenario{实验探究课《光合色素的奥秘》}
 
 这是我给少儿科学教育的见面礼，
 把高中生物必做实验搬到了小学课堂上。
@@ -26,12 +26,12 @@
 让“化学家的工作”不再只是课本上的句子(@tamer-figure-ref{chlorophyll})。
 
 @tamer-figure!['chlorophyll @list{叶绿素提取与层析实验@~ 课堂实况}]{
- @para{@stone-image["architecture/portfolio/stem/grinding.png" #:scale 0.24] @elem{研磨}}
- @para{@stone-image["architecture/portfolio/stem/filter.demo.png" #:scale 0.20] @elem{教师示范}}
- @para{@stone-image["architecture/portfolio/stem/filter.png" #:scale 0.24] @elem{过滤}}
+ @para{@stone-image["architecture/chlorophyll/grinding.png" #:scale 0.48] @elem{研磨}}
+ @para{@stone-image["architecture/chlorophyll/filter.demo.png" #:scale 0.40] @elem{教师示范}}
+ @para{@stone-image["architecture/chlorophyll/filter.png" #:scale 0.48] @elem{过滤}}
 
- @para{@stone-image["architecture/portfolio/stem/spinach.png" #:scale 0.5] @elem{苏州同事的层析滤纸}}
- @para{@stone-image["architecture/water.vs.chlorophyll.png" #:scale 0.5] @elem{绿色水溶液@~ vs.@~ 叶绿素胶体}}
+ @para{@stone-image["architecture/chlorophyll/spinach.png" #:scale 0.5] @elem{苏州同事的层析滤纸}}
+ @para{@stone-image["architecture/chlorophyll/water.vs.filtrate.png" #:scale 0.5] @elem{绿色水溶液@~ vs.@~ 叶绿素胶体}}
 }
 
 两种教学场景的关键流程的差异见@tamer-figure-ref{chlorophyll.act}，
@@ -57,7 +57,7 @@
 甚至重新思考“物体的颜色之谜” 是否真像教科书里的结论那般简单。
 @focus{科学课标更强调综合性，理应比理科单科更突出现象的非单一解释。}
 
-@handbook-scenario{教学案例: PBL 学期大作品《剑龙骨架》}
+@handbook-scenario{项目制学期大作品《剑龙骨架》}
 
 这是与镇江培文实验学校合作的第一个完全由我独立主导的学期大作品(@fig-ref*[#:subidx 'a]{stegosaurus})。
 选题呼应苏教版六年级科学《化石的奥秘》，
@@ -73,10 +73,10 @@
  @item{将相关知识写成《好奇心档案》打印给学生。}]
 
 @tamer-figure!['stegosaurus @list{剑龙骨架大作品}]{
- @para{@stone-image["architecture/portfolio/stem/stegosaurus.png" #:scale 0.25] @elem{项目成品}}
- @para{@stone-image["architecture/portfolio/stem/paper.png" #:scale 0.55] @elem{课代表把小论文做成了手抄报}}
+ @para{@stone-image["architecture/portfolio/stem/stegosaurus.png" #:scale 0.32] @elem{项目成品}}
+ @para{@stone-image["architecture/portfolio/stem/paper.png" #:scale 0.52] @elem{课代表把小论文做成了手抄报}}
 
- @(let ([s 0.125])
+ @(let ([s 0.5])
     @(list @para{@stone-image["architecture/portfolio/stem/torso.png" #:scale s] @elem{躯干组}}
            @para{@stone-image["architecture/portfolio/stem/internal.png" #:scale s] @elem{内脏组}}
            @para{@stone-image["architecture/portfolio/stem/vertebra.png" #:scale s] @elem{脊椎组}}

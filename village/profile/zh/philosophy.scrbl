@@ -40,7 +40,7 @@
  @(para (stone-image "architecture/portfolio/python.png" #:scale s) @elem{三年级 Python 社团课})
   
  @(para (stone-image "architecture/hookes.png" #:scale s) @elem{六年级孩子合作探索胡克定律})
- @(para (stone-image "architecture/portfolio/game.of.life.png" #:scale s) @elem{七年级女孩体验“生命游戏”})})
+ @(para (stone-image "architecture/game.of.life.png" #:scale s) @elem{七年级女孩体验“生命游戏”})})
 
 @:res{Shell 最重要的启蒙价值是引出那个我们称为@emph{函数}的概念}，
 之后学生可以根据自己的实际情况选择不同的入门路线，

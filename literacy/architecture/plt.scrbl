@@ -79,7 +79,7 @@
  @(let ([s 0.3])
     (list @(para (stone-image "architecture/shell.png" #:scale s) @elem{二年级孩子认识 Shell})
           @(para (stone-image "architecture/hookes.png" #:scale s) @elem{六年级孩子合作探索胡克定律})
-          @(para (stone-image "architecture/conway.png" #:scale s) @elem{七年级女孩体验“生命游戏”})))}
+          @(para (stone-image "architecture/game.of.life.png" #:scale s) @elem{七年级女孩体验“生命游戏”})))}
 
 Shell 最重要的启蒙价值是引出那个我们称为“函数”的东西。
 这个术语看着吓人，其实就是动词，或操作的名称。

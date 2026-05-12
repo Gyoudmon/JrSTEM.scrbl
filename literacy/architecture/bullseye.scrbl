@@ -14,8 +14,7 @@
 @bold{结果可能重要，过程一定重要，知识网和逻辑链肯定更重要。}
 AI 出结果更快，但是对初学者没有任何意义。
 
-@tamer-figure!['bullseye "《三原色打靶》游戏运行效果"]{
- @(stone-image "architecture/bullseye.png" #:scale 0.5)}
+@tamer-figure!['bullseye "《三原色打靶》游戏运行效果"]{@(stone-image "architecture/bullseye.png")}
 
 @tamer-figure-ref{bullseye}中的男生五年级，
 有一年 Scratch/pygame 网课经验。
@@ -38,8 +37,7 @@ AI 出结果更快，但是对初学者没有任何意义。
 因此，我们很愉快地约定：
 这学期结束后，我们一起做一个有意思的项目。
 
-@tamer-figure!['ai4bullseye "《冒险岛4》水枪打靶游戏"]{
- @(stone-image "architecture/adventure-island.png" #:scale 0.5)}
+@tamer-figure!['ai4bullseye "《冒险岛4》水枪打靶游戏"]{@(stone-image "architecture/adventure-island.png")}
 
 对于项目选题，他知道自己不想做什么，
 但是说不出来想做什么。

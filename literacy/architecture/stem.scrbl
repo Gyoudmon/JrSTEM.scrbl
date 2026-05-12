@@ -6,7 +6,7 @@
 @;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 @handbook-root-story{架构师说，我的科学教育}
 @article-desc[#:keywords ["义务教育科学" "STEM" "PBL"]
-              #:timestamp "2026-01-31"]
+              #:timestamp "2026-05-12"]
 
 猝不及防间，二十一世纪已经过去了四分之一。
 工业革命在第四范式短暂停留之后，
@@ -111,16 +111,19 @@
 作为学校科学课的实验环节，适合安排给六年级学生。
 让“化学家的工作包括提取、合成新物质”不再只是课本上的句子(@tamer-figure-ref{chlorophyll})。
 
-@tamer-figure!['chlorophyll @list{叶绿素提取与层析实验@~ 课堂实况}
-               @stone-image["architecture/chlorophyll.png"]]
+@tamer-figure!['chlorophyll @list{叶绿素提取与层析实验@~ 课堂实况}]{
+ @para{@stone-image["architecture/chlorophyll/grinding.png" #:scale 0.48] @elem{研磨}}
+ @para{@stone-image["architecture/chlorophyll/filter.demo.png" #:scale 0.40] @elem{教师示范}}
+ @para{@stone-image["architecture/chlorophyll/filter.png" #:scale 0.48] @elem{过滤}}
+
+ @para{@stone-image["architecture/chlorophyll/spinach.png" #:scale 0.5] @elem{苏州同事的层析滤纸}}
+ @para{@stone-image["architecture/chlorophyll/water.vs.filtrate.png" #:scale 0.5] @elem{绿色水溶液@~ vs.@~ 叶绿素胶体}}
+}
 
 最巧妙的安排其实还是跨年级协作。
 六年级学《物质的变化》时，五年级碰巧在学《光》。
 实验产生的叶绿素滤液也是个做光学实验的宝藏材料，
-可以在标准教学过程中穿插一个对比实验(@tamer-figure-ref{water.vs.chlorophyll})。
-
-@tamer-figure!['water.vs.chlorophyll @list{绿色水溶液@~ vs.@~ 叶绿素胶体}
-               @stone-image["architecture/water.vs.chlorophyll.png"]]
+可以在标准教学过程中穿插一个对比实验(@tamer-figure-ref*[#:subidx 'e]{chlorophyll})。
 
 让学生看到光线穿过叶绿素滤液时形成的光亮通路，
 不仅可以解释光沿直线传播，还能自然引入胶体和光学性质话题，
