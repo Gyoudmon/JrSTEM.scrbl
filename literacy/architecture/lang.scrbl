@@ -134,10 +134,14 @@ C++ 项目价值三千万人民币，
 是我作为职业软件架构师最硬核的代表作，
 目前正运行在若干万吨巨轮上供工程人员施工作业(@tamer-figure-ref{dredging})。
 
-@tamer-figure!['dredging "我的疏浚工控系统(C++/CX 外壳, 标准 C++17 内核)"]{
- @(let ([s 0.5])
-    (list @(para (stone-image "architecture/metrics.png" #:scale s) @elem{疏浚数据可视化界面})
-          @(para (stone-image "architecture/SCADA.png" #:scale s) @elem{疏浚施工现场})))}
+@(let ([s 0.5])
+   @tamer-figure!['dredging "我的疏浚工控系统(C++/CX 外壳, 标准 C++17 内核)"]{
+ @(para @elem{@hspace[1]@(stone-image "architecture/metrics.png" #:scale s)})
+ @(para @hspace[1] @elem{疏浚数据可视化界面})
+ @para[]
+ @para[]
+ @(para @elem{@$tex:hspace{-2ex}@(stone-image "architecture/SCADA.png" #:scale s)}
+        @elem{疏浚施工现场@hspace[1]})})
 
 而项目坟场最酷的价值，是从中自然生长出来的我的教学用软件(@tamer-table-ref{asset})，
 它酷在：@emph{只有人类工程师的软件才具有生长性}。

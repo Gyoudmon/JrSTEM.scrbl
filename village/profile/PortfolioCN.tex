@@ -1,0 +1,51 @@
+%% employing the CTeX for better localization
+%% `macnew` looks better in scrreprt
+\usepackage[heading = true, fontset = macnew]{ctex}
+
+% \usepackage{showframe}
+
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+\renewcommand{\contentsname}{目\hspace{1em}录}
+\renewcommand{\textfraction}{0.00}
+
+%% set chapter format
+\ctexset{
+   chapter/name = {第, 篇},
+   chapter/number = \chinese{chapter},
+   section/name = {第, 幕},
+   section/number = \chinese{section},
+   section/format = \Large\bfseries,
+   subsection/name = {第, 场},
+   subsection/number = \chinese{subsection},
+   subsubsection/name = {第, 镜},
+   subsubsection/number = \chinese{subsubsection}
+}
+
+\renewcommand{\preDoc}{
+   \uppertitleback{
+   \large
+   编　著：WarGrey G. Ju\\[0.2cm]
+   版　本：V1.0\\[0.2cm]
+   编制日期：2026年4月\\[0.2cm]
+   适用学段：小学4--6年级｜初中7--8年级\\[0.2cm]
+   课程定位：数学建模驱动的跨学科教育\\[0.2cm]
+   主线科目：计算机科学(CS)｜义务教育科学(STEM)｜技术高考｜竞赛启蒙\\[0.2cm]
+   教学范式：纸笔推演｜实验探究｜项目式学习(PBL)\\[0.2cm]
+   认知路径：自顶向下，可见结构 → 可操作结构 → 抽象结构
+   }
+  
+   \lowertitleback{
+   \large
+   \textbf{版权声明}\\[0.4cm]
+   本作品集所有内容(教学体系、课程设计、教案案例、JrLab教学引擎、项目实践、教学方法等)均为编著者原创，
+   受《中华人民共和国著作权法》保护，知识产权归编著者所有。\\[0.4cm]
+   本材料仅限学校合作、教研交流、教学实施使用，未经书面授权，禁止复制、传播、改编、商用及二次发布。\\[2.5cm]
+   
+   合作咨询：\\[0.2cm]
+   工作微信：\texttt{shadowargrey}\\[0.2cm]
+   工作邮箱：\href{mailto:juzhenliang@hotmail.com}{juzhenliang@hotmail.com}\\[0.2cm]
+   教研品牌：\raisebox{-0.3\height}{\includegraphics[height=1.8em]{logo.png}}\, 架构师的跨学科课堂
+  }
+}
